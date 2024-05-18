@@ -1,0 +1,42 @@
+extends ../../layouts/default.pug
+block main
+  div(class="card mb-3")
+    div(class="card-header") Lọc trạng thái
+    div(card="card-body row")
+      div(class="col-4" filter-status)
+        each button in buttonStatus
+          button(class=`btn btn-outline-info ${button.active}` status=`${button.status}` btn-status) #{button.name}
+
+  div(class="card mb-3")
+    div(class="card-header") Movies 
+    div(class="card-body")
+      table(class="table")
+        thead
+          tr 
+            th STT
+            th Ảnh 
+            th Name 
+            th Version 
+            th Premiere Date 
+            th Đạo diễn 
+            th Trạng thái
+            th Hành động
+        tbody 
+          -for(let i = 0; i < movies.length; i++)
+            tr(class="align-items-center")
+              td #{ i + 1 }
+              td 
+                img(src=`${movies[i].thumbnail}`, alt=`${movies[i].name}` width="100px" height="auto")
+              td #{movies[i].name}
+              td #{movies[i].year}
+              td #{movies[i].premiereDate}
+              td #{movies[i].director}
+              td 
+                if(movies[i].status == "active")
+                  button(type="button" class="badge badge-success") Hoạt động
+                else 
+                  button(type="button" class="badge badge-danger") Dừng hoạt động
+              td
+                button(type="button" class="btn btn-warning") Sửa
+                button(type="button" class="btn btn-info") Chi tiết
+                button(type="button" class="btn btn-danger") Xoá 

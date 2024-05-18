@@ -1,0 +1,15 @@
+.header nav {
+  padding-left: 50px;
+}
+.header nav img {
+  width: 150px;
+  margin-right: 70px;
+}
+
+.sider {
+  height: 100vh;
+}
+
+.sider a {
+  text-align: center;
+}

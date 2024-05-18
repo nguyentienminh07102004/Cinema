@@ -1,0 +1,16 @@
+extends ../../layouts/default.pug
+block main 
+  div(class="container")
+    ul(class="movie d-flex flex-wrap")
+      each movie in movies
+        li
+          div(class="card")
+            div(class="card-header")
+              img(class="card-img-top" src=`${movie.thumbnail}`)
+            div(class="card-body")
+              div(class="card-title") Tên bộ phim: #{movie.name}
+              div(class="card-title") Thể loại: #{movie.categories}
+              div(class="card-title") Thời lượng phim: #{movie.runtime} phút
+              div(class="card-title") Ngày khởi chiếu: #{movie.premiereDate},
+              div(class="card-title") Phiên bản: #{movie.year}
+              button(class="btn btn-danger") Đặt vé

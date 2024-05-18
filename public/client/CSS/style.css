@@ -1,0 +1,41 @@
+.header {
+  height: 150px;
+}
+
+.header img {
+  width: 100px;
+  height: auto;
+}
+
+.header .container-fluid {
+  padding: 20px 50px;
+}
+
+.header .container-fluid .row .img-logo {
+  text-align: center;
+}
+
+.header .container-fluid .row a:first-child {
+  margin-right: 50px;
+}
+
+.header .container-fluid .row .menu {
+  font-size: 25px;
+}
+
+ul.movie li {
+  list-style: none;
+  width: 300px;
+  height: auto;
+  margin-right: 50px;
+  margin-bottom: 60px;
+}
+
+ul.movie li .card-img-top {
+  height: 250px;
+}
+
+ul.movie li .card {
+  height: 550px;
+}
+
